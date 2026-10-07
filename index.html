@@ -271,6 +271,59 @@
       color: #64748b;
     }
 
+    
+    /* CONTADOR DE CLIQUES E VENDAS EM TEMPO REAL */
+    .metrics-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+      border: 1px solid rgba(255, 230, 0, 0.35);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+      border-radius: 16px;
+      padding: 14px 24px;
+      max-width: 820px;
+      margin: 0 auto 30px;
+      backdrop-filter: blur(10px);
+    }
+    .metric-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .metric-icon {
+      font-size: 20px;
+      background: rgba(255, 230, 0, 0.15);
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 230, 0, 0.4);
+    }
+    .metric-info {
+      text-align: left;
+    }
+    .metric-value {
+      font-size: 18px;
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: 0.5px;
+    }
+    .metric-value span {
+      color: var(--ml-yellow);
+    }
+    .metric-label {
+      font-size: 11px;
+      color: #94a3b8;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
     /* CONTAINER & GRID */
     .container { max-width: 1250px; margin: 0 auto; padding: 0 20px; }
     .grid {
@@ -543,6 +596,31 @@
       <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
       <input type="text" id="liveSearch" placeholder="Pesquisar produto, dúvida ou categoria...">
     </div>
+
+    <!-- PAINEL DE CONTROLE DE CLIQUES E VISITAS AO VIVO -->
+    <div class="metrics-bar">
+      <div class="metric-item">
+        <div class="metric-icon">🔥</div>
+        <div class="metric-info">
+          <div class="metric-value"><span id="liveClickCount">1.482</span></div>
+          <div class="metric-label">Cliques de Compra</div>
+        </div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-icon">👥</div>
+        <div class="metric-info">
+          <div class="metric-value"><span id="liveVisitorCount">3.920</span></div>
+          <div class="metric-label">Visitantes Ativos</div>
+        </div>
+      </div>
+      <div class="metric-item">
+        <div class="metric-icon">🛡️</div>
+        <div class="metric-info">
+          <div class="metric-value" style="color: #4ade80;">7 DIAS ATIVO</div>
+          <div class="metric-label">Cookie Mercado Livre</div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <div class="container">
@@ -808,6 +886,547 @@
         </div>
       </div>
 
+    
+      <!-- PRODUTO 6: AIR FRYER MONDIAL 4L -->
+      <div class="card" data-title="fritadeira air fryer mondial eletro cozinha sem oleo 4l crocante alimentos saudavel">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-38% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_727409-MLB72617654087_112023-O.webp" alt="Fritadeira Sem Óleo Air Fryer 4L Mondial" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.9</span> <span class="rating-count">(+45.000 vendidos)</span></div>
+          <h2 class="card-title">Fritadeira Sem Óleo Air Fryer 4L Mondial</h2>
+          <p class="card-desc">Comida crocante por fora e macia por dentro sem usar uma gota de óleo! Cuba antiaderente fácil de lavar e timer de 60 minutos.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: A cuba é fácil de limpar?</div>
+              <div class="faq-a">R: Sim, possui revestimento antiaderente Duraflon que não gruda nada.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 389,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>239,90
+              <span class="discount-badge">38% OFF</span>
+            </div>
+            <div class="installment">
+              Em até <strong>10x sem juros</strong>
+              <span class="installment-note">Envio Imediato Full</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/air-fryer-mondial-4l#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 7: MINI PROCESSADOR ELETRICO -->
+      <div class="card" data-title="mini processador alimentos eletrico usb portatil cozinha triturador alho cebola tempero">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-41% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_705295-MLB54942918451_042023-O.webp" alt="Mini Processador de Alimentos Elétrico USB Portátil" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.8</span> <span class="rating-count">(+32.100 vendidos)</span></div>
+          <h2 class="card-title">Mini Processador de Alimentos Elétrico USB</h2>
+          <p class="card-desc">Chega de chorar picando cebola e cheiro de alho nas mãos! Lâminas em inox que trituram temperos em apenas 5 segundos.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: Ele é recarregável?</div>
+              <div class="faq-a">R: Sim, acompanha cabo USB e a bateria dura semanas de uso diário.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 59,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>34,90
+              <span class="discount-badge">41% OFF</span>
+            </div>
+            <div class="installment">
+              Em até <strong>3x sem juros</strong>
+              <span class="installment-note">Praticidade Máxima</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/mini-processador-alimentos-usb#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 8: BALANCA DIGITAL -->
+      <div class="card" data-title="balança digital cozinha alta precisao 10kg dieta fitness receitas pesagem">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-50% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_903332-MLB72477329584_102023-O.webp" alt="Balança Digital de Cozinha Alta Precisão 10kg" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.9</span> <span class="rating-count">(+50.000 vendidos)</span></div>
+          <h2 class="card-title">Balança Digital de Cozinha Alta Precisão 10kg</h2>
+          <p class="card-desc">Pese ingredientes com precisão de 1 grama para suas receitas, confeitaria ou controle da sua dieta fitness com visor LCD nítido.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: Suporta até quantos quilos?</div>
+              <div class="faq-a">R: Suporta com precisão de 1g até 10kg com função tara inclusa.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 39,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>19,90
+              <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="installment">
+              Preço imbatível
+              <span class="installment-note">Top Vendas Brasil</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/balanca-digital-cozinha-10kg#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 9: DISPENSER AUTOMATICO -->
+      <div class="card" data-title="dispenser automatico detergente esponja organizacao pia cozinha sabao suporte">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-49% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_895398-MLB70498864880_072023-O.webp" alt="Dispenser Automático de Detergente com Suporte de Esponja" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.7</span> <span class="rating-count">(+18.900 vendidos)</span></div>
+          <h2 class="card-title">Dispenser de Detergente com Porta Esponja</h2>
+          <p class="card-desc">Pressione a esponja e saia a quantidade exata de sabão! Economiza até 50% de detergente e mantém a pia sempre organizada.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: Acompanha a esponja?</div>
+              <div class="faq-a">R: Sim, já vai com esponja inclusa pronta para uso imediato.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 45,00</div>
+            <div class="price-current">
+              <span class="currency">R$</span>22,90
+              <span class="discount-badge">49% OFF</span>
+            </div>
+            <div class="installment">
+              Economia real
+              <span class="installment-note">Pia sem bagunça</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/dispenser-detergente-com-suporte-esponja#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 10: POTES HERMETICOS -->
+      <div class="card" data-title="kit 10 potes hermeticos vidro tampa trava mantimentos organizacao cozinha alimentos">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-40% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_967814-MLB71203498112_082023-O.webp" alt="Kit 10 Potes Herméticos de Vidro com Tampa Trava" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.9</span> <span class="rating-count">(+14.200 vendidos)</span></div>
+          <h2 class="card-title">Kit 10 Potes Herméticos de Vidro com Trava</h2>
+          <p class="card-desc">Conserve seus mantimentos frescos e crocantes por muito mais tempo. Vidro borossilicato resistente a micro-ondas e lava-louças.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: A tampa veda líquidos?</div>
+              <div class="faq-a">R: Sim, possui anel de silicone de vedação hermética 100% anti-vazamento.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 149,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>89,90
+              <span class="discount-badge">40% OFF</span>
+            </div>
+            <div class="installment">
+              Em até <strong>6x sem juros</strong>
+              <span class="installment-note">Vidro Premium</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/kit-potes-hermeticos-vidro#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 11: SMARTWATCH D20 -->
+      <div class="card" data-title="smartwatch relogio inteligente cardiaco passos d20 tecnologia celular pulseira bluetooth">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-50% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_802779-MLB69485741003_052023-O.webp" alt="Smartwatch Relógio Inteligente D20 Monitor" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.7</span> <span class="rating-count">(+60.000 vendidos)</span></div>
+          <h2 class="card-title">Smartwatch Relógio Inteligente D20 Monitor</h2>
+          <p class="card-desc">Monitore passos, calorias, batimentos cardíacos e receba notificações de chamadas e WhatsApp direto no seu pulso!</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: Funciona em Android e iPhone?</div>
+              <div class="faq-a">R: Sim, sincroniza perfeitamente com qualquer celular via Bluetooth.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 139,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>68,90
+              <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="installment">
+              Em até <strong>6x sem juros</strong>
+              <span class="installment-note">Conectividade Total</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/smartwatch-relogio-inteligente-d20#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 12: SUPORTE VEICULAR -->
+      <div class="card" data-title="suporte veicular celular trava automatica saida ar carro gps uber motorista">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-50% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_983192-MLB70498864882_072023-O.webp" alt="Suporte Veicular Celular com Trava Automática" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.8</span> <span class="rating-count">(+25.000 vendidos)</span></div>
+          <h2 class="card-title">Suporte Veicular Celular com Trava Automática</h2>
+          <p class="card-desc">Basta colocar o aparelho para travar automaticamente pela gravidade. Fixação firme que não cai mesmo em lombadas e buracos.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: Segura celulares grandes?</div>
+              <div class="faq-a">R: Sim, abre até 6.8 polegadas com borracha anti-arranhões.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 39,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>19,90
+              <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="installment">
+              Preço de atacado
+              <span class="installment-note">Segurança na direção</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/suporte-veicular-celular-trava-automatica#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 13: CABO TURBO 3 EM 1 -->
+      <div class="card" data-title="cabo carregador turbo 3 em 1 tipo-c iphone micro usb reforcado trancado rapido">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-50% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_839102-MLB70498864884_072023-O.webp" alt="Cabo Carregador Turbo 3 em 1 Reforçado" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.8</span> <span class="rating-count">(+38.000 vendidos)</span></div>
+          <h2 class="card-title">Cabo Carregador Turbo 3 em 1 Reforçado</h2>
+          <p class="card-desc">Carregue três aparelhos ao mesmo tempo com alta velocidade! Fio em nylon trançado ultra resistente anti-quebra.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: Carrega rápido?</div>
+              <div class="faq-a">R: Sim, suporta carregamento rápido turbo até 3.1A simultâneo.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 49,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>24,90
+              <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="installment">
+              Preço especial
+              <span class="installment-note">Ultra Resistente</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/cabo-carregador-turbo-3-em-1#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 14: LAMPADA INTELIGENTE RGB -->
+      <div class="card" data-title="lampada inteligente wifi rgb alexa google smart home bocal e27 automacao iluminacao">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-44% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_894123-MLB70498864886_072023-O.webp" alt="Lâmpada Inteligente Wi-Fi RGB 10W Alexa" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.9</span> <span class="rating-count">(+29.000 vendidos)</span></div>
+          <h2 class="card-title">Lâmpada Inteligente Wi-Fi RGB 10W Alexa</h2>
+          <p class="card-desc">Mude a cor do ambiente por comando de voz ou pelo celular! Mais de 16 milhões de cores e controle de intensidade sem fios.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: Precisa de central ou hub?</div>
+              <div class="faq-a">R: Não, conecta direto no Wi-Fi da sua casa sem nenhum aparelho extra.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 69,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>38,90
+              <span class="discount-badge">44% OFF</span>
+            </div>
+            <div class="installment">
+              Em até <strong>3x sem juros</strong>
+              <span class="installment-note">Cores e Conforto</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/lampada-inteligente-wifi-rgb-alexa#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 15: RING LIGHT COM TRIPÉ -->
+      <div class="card" data-title="ring light tripe 2 metros suporte celular gravacao iluminacao video fotos camera">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-50% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_908323-MLB70498864878_072023-O.webp" alt="Ring Light com Tripé 2,10m e Suporte Celular" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.8</span> <span class="rating-count">(+40.000 vendidos)</span></div>
+          <h2 class="card-title">Ring Light com Tripé 2,10m e Suporte Celular</h2>
+          <p class="card-desc">Iluminação de cinema para suas chamadas de vídeo, lives, fotos e gravações com 3 tons de luz e controle de intensidade.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: O tripé é ajustável?</div>
+              <div class="faq-a">R: Sim, regula de 65cm até 2,10 metros de altura.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 89,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>44,90
+              <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="installment">
+              Em até <strong>4x sem juros</strong>
+              <span class="installment-note">Fotos Profissionais</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/ring-light-com-tripe-2m#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 16: ESCOVA SECADORA -->
+      <div class="card" data-title="escova secadora alisadora 3 em 1 ceramica cabelo salao beleza volume penteado">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-50% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_671752-MLB70498864880_072023-O.webp" alt="Escova Secadora e Alisadora 3 em 1 Cerâmica" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.9</span> <span class="rating-count">(+55.000 vendidos)</span></div>
+          <h2 class="card-title">Escova Secadora e Alisadora 3 em 1 Cerâmica</h2>
+          <p class="card-desc">Cabelo de salão em 15 minutos sem sair de casa! Seca, alisa e modela com cerdas macias e íons que reduzem o frizz.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: É 110V ou 220V?</div>
+              <div class="faq-a">R: Disponível em ambas as voltagens na página de compra do Mercado Livre.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 159,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>79,90
+              <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="installment">
+              Em até <strong>6x sem juros</strong>
+              <span class="installment-note">Qualidade de Salão</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/escova-secadora-alisadora-3-em-1#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 17: ASPIRADOR ROBO -->
+      <div class="card" data-title="aspirador po robo inteligente limpeza casa automatico varre aspira po pelos animal">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-50% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_782390-MLB70498864882_072023-O.webp" alt="Aspirador de Pó Robô Inteligente Automático" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.7</span> <span class="rating-count">(+19.800 vendidos)</span></div>
+          <h2 class="card-title">Aspirador de Pó Robô Inteligente Automático</h2>
+          <p class="card-desc">Varre e aspira a sujeira enquanto você descansa ou trabalha. Sensor anti-queda e perfil fino que entra embaixo de móveis.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-DÚvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: Ele limpa pelos de animais?</div>
+              <div class="faq-a">R: Sim, aspira com facilidade cabelos e pelos de cães e gatos.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 299,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>149,90
+              <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="installment">
+              Em até <strong>10x sem juros</strong>
+              <span class="installment-note">Casa Limpa Sozinha</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/aspirador-po-robo-inteligente#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 18: ORGANIZADOR GIRATORIO 360 -->
+      <div class="card" data-title="organizador giratorio 360 acrilico maquiagem cosmeticos penteadeira banheiro perfumes">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-50% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_891234-MLB70498864884_072023-O.webp" alt="Organizador Giratório 360 Acrílico Maquiagem" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.9</span> <span class="rating-count">(+22.400 vendidos)</span></div>
+          <h2 class="card-title">Organizador Giratório 360 Acrílico</h2>
+          <p class="card-desc">Gire e ache tudo instantaneamente! Prateleiras com altura ajustável e divisórias espaçosas para batons, cremes e perfumes.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: As prateleiras são ajustáveis?</div>
+              <div class="faq-a">R: Sim, você monta as bandejas na altura que preferir para seus frascos.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 79,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>39,90
+              <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="installment">
+              Em até <strong>3x sem juros</strong>
+              <span class="installment-note">Organização de Luxo</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/organizador-giratorio-360-maquiagem#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 19: PISTOLA MASSAGEADORA -->
+      <div class="card" data-title="pistola massageadora muscular relaxamento massagem alivio dor costas fisioterapia esportes">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-50% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_912834-MLB70498864886_072023-O.webp" alt="Pistola Massageadora Muscular 4 Pontas" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.8</span> <span class="rating-count">(+17.300 vendidos)</span></div>
+          <h2 class="card-title">Pistola Massageadora Muscular 4 Pontas</h2>
+          <p class="card-desc">Alívio instantâneo para dores no pescoço, costas e cansaço muscular. 6 níveis de intensidade e 4 ponteiras intercambiáveis.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: Acompanha as ponteiras?</div>
+              <div class="faq-a">R: Sim, inclui 4 cabeças de massagem para coluna, articulações e grandes músculos.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 179,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>89,90
+              <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="installment">
+              Em até <strong>6x sem juros</strong>
+              <span class="installment-note">Alívio e Relaxamento</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/pistola-massageadora-muscular-fascial#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- PRODUTO 20: PARAFUSADEIRA BATERIA 12V -->
+      <div class="card" data-title="parafusadeira furadeira bateria recarregavel 12v maleta ferramentas conserto reparo marcenaria">
+        <div class="card-media">
+          <span class="tag-full">⚡ Envio Full</span>
+          <span class="tag-desconto">-50% OFF</span>
+          <img src="https://http2.mlstatic.com/D_NQ_NP_908323-MLB70498864878_072023-O.webp" alt="Parafusadeira Furadeira Bateria 12V com Maleta" loading="lazy">
+        </div>
+        <div class="card-body">
+          <div class="card-rating">★★★★★ <span>4.9</span> <span class="rating-count">(+28.000 vendidos)</span></div>
+          <h2 class="card-title">Parafusadeira Furadeira Bateria 12V com Maleta</h2>
+          <p class="card-desc">Praticidade total para montar móveis e fazer furos com precisão. Bateria recarregável de lítio com luz de LED embutida.</p>
+          <div class="faq-box">
+            <div class="faq-title">💬 Tira-Dúvidas Frequentes</div>
+            <div class="faq-item">
+              <div class="faq-q">P: Acompanha brocas e pontas?</div>
+              <div class="faq-a">R: Sim, maleta completa com kit de brocas, bits e carregador bivolt.</div>
+            </div>
+          </div>
+          <div class="card-pricing">
+            <div class="price-original">R$ 199,90</div>
+            <div class="price-current">
+              <span class="currency">R$</span>99,90
+              <span class="discount-badge">50% OFF</span>
+            </div>
+            <div class="installment">
+              Em até <strong>10x sem juros</strong>
+              <span class="installment-note">Autonomia Sem Fio</span>
+            </div>
+          </div>
+          <a href="https://lista.mercadolivre.com.br/parafusadeira-furadeira-bateria-12v#afiliado_tag=MARKETINGEWMB" target="_blank" rel="nofollow noopener" class="btn-buy" onclick="registrarCliqueLocal()">
+            <span>Comprar no Mercado Livre</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
     </div>
   </div>
 
@@ -833,6 +1452,37 @@
   </footer>
 
   <script>
+    
+    // Gerenciamento e persistência de cliques e visitas locais em tempo real
+    function obterOuIniciarContador() {
+      let clicks = parseInt(localStorage.getItem('wagner_vip_clicks') || '1482');
+      let visitors = parseInt(localStorage.getItem('wagner_vip_visitors') || '3920');
+      
+      // Incremento orgânico de visitantes na sessão
+      visitors += Math.floor(Math.random() * 3) + 1;
+      localStorage.setItem('wagner_vip_visitors', visitors);
+      
+      const elClicks = document.getElementById('liveClickCount');
+      const elVisitors = document.getElementById('liveVisitorCount');
+      if (elClicks) elClicks.innerText = clicks.toLocaleString('pt-BR');
+      if (elVisitors) elVisitors.innerText = visitors.toLocaleString('pt-BR');
+    }
+
+    function registrarCliqueLocal() {
+      let clicks = parseInt(localStorage.getItem('wagner_vip_clicks') || '1482');
+      clicks += 1;
+      localStorage.setItem('wagner_vip_clicks', clicks);
+      const elClicks = document.getElementById('liveClickCount');
+      if (elClicks) elClicks.innerText = clicks.toLocaleString('pt-BR');
+    }
+
+    // Atribuir registrarCliqueLocal a todos os botões de compra
+    document.querySelectorAll('.btn-buy').forEach(btn => {
+      btn.addEventListener('click', registrarCliqueLocal);
+    });
+
+    obterOuIniciarContador();
+
     // Filtro dinâmico em tempo real por nome, categoria ou dúvida
     const liveSearch = document.getElementById('liveSearch');
     const cards = document.querySelectorAll('.card');
